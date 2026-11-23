@@ -47,9 +47,9 @@ git init
 git status
 git add .
 git commit -m "Initial NatureHoney web application"
-git branch -M main
-git remote add origin git@github.com:YOUR_USERNAME/NatureHoney.git
-git push -u origin main
+git branch -M Dev
+git remote add owc-ssh git@github.com:YOUR_USERNAME/NatureHoney.git
+git push -u owc-ssh Dev
 ```
 
 Practise a feature branch:
@@ -60,14 +60,14 @@ git switch -c feature/update-homepage
 git diff
 git add .
 git commit -m "Update NatureHoney homepage"
-git push -u origin feature/update-homepage
+git push -u owc-ssh feature/update-homepage
 ```
 
 Then create a Pull Request on GitHub, merge it, and update local main:
 
 ```bash
 git switch main
-git pull --rebase origin main
+git pull --rebase owc-ssh Dev
 ```
 
 Do not commit passwords, `~/.m2/settings.xml`, private keys, database dumps containing real data, or uploaded customer data.
